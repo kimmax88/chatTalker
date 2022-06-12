@@ -19,7 +19,7 @@ body{
 
 .itemBox{
   display: block;
-  outline: 1px solid red;
+  
 
   @include respond(med){
     display: flex;
