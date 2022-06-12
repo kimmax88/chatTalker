@@ -1,0 +1,26 @@
+.navBox{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom:2px solid $color-hot ;
+}
+
+.logoBox{
+  width: 13rem;
+
+  h1{
+    display: none;
+  }
+}
+
+.banner{
+  padding: 0 2rem;
+}
+
+.imgBox{
+  padding: 0 2rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg) no-repeat bottom center;
+  background-size: contain;
+  outline: 1px solid #eee;
+}
+

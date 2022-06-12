@@ -1,0 +1,89 @@
+.sectionTitle{
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.sectionDesc{
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1.6rem 2rem ;
+}
+
+.titleBox{
+  display: flex;
+  flex-direction: column;
+  &__titleMain{
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  &__titleHot{
+    color: $color-primary;
+    order:-1;
+    margin: 3rem 0 .8rem;
+    
+  }
+  &__subTitle{
+    margin: 1.5rem 0 3rem;
+    
+  }
+}
+
+.mediaItem{
+  text-align: center;
+
+  &__title{
+    font-size: 1.8rem;
+    margin: 1.6rem 0;
+  }
+  p{
+    color:#747474;
+  }
+}
+
+.taItem{
+  text-align: center;
+  padding-bottom: 2.4rem;
+  &__title{
+    font-size: 1.6rem;
+    color: $color-primary;
+    margin: 1.6rem 0;
+  }
+  &__desc{
+    margin: 0 1.6rem;
+  }
+}
+.productionHeader{
+  text-align: center ;
+}
+.productionItem{
+  
+  padding-bottom: 2.4rem;
+  &__title{
+    font-size: 1.8rem;
+    margin: 1.6rem 0;
+  }
+  
+}
+
+.commentItem{
+  &__words{
+    margin: 0;
+  }
+}
+
+.commentUser{
+  &__com{
+    margin:0;
+  }
+  &__title{
+    margin-bottom: 0;
+  }
+}
+
+.talk{
+  &__text{
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+}
