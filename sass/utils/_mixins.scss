@@ -1,0 +1,16 @@
+
+@mixin respond($bp) {
+  @if $bp == med {
+    @media (min-width:700px){@content};
+  }
+  @if $bp == lg {
+    @media (min-width:900px){@content};
+  }
+  
+}
+
+
+@mixin width-lg {
+  max-width:$width-lg;
+  margin: 0 auto;
+}

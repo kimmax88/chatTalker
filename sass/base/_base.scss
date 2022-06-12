@@ -15,7 +15,31 @@ body{
   max-width: 100%;
   margin: 0 auto;
 
-  outline:1px solid #eee  ;
+}
+
+.itemBox{
+  display: block;
+  outline: 1px solid red;
+
+  @include respond(med){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+
+  @include respond(lg){
+    @include width-lg
+  }
+
+  &--production{
+    @include respond(lg){
+      width: 50rem;
+      order: -1;
+      margin: 0
+      
+    }
+  }
 }
 img{
   width:100%;
@@ -31,4 +55,7 @@ ul{
 
 section{
   margin-top: 6rem;
+  @include respond(lg){
+    margin-top: 10rem;
+  }
 }

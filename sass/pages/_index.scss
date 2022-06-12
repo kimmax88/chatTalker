@@ -11,12 +11,30 @@
   margin:0 auto 2.4rem;
 }
 
+.production{
+  display: block;
+
+  @include respond(lg){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include width-lg;
+    margin-top: 10rem;
+  }
+}
 .productionHeader{
   margin-bottom: 3.2rem;
+  text-align: center ;
   &__desc{
     margin-bottom: 1.6rem;
   }
+
+  @include respond(lg){
+    text-align: left;
+    margin-right: calc((100% - 50rem - 35rem)/3);
+  }
 }
+
 .productionItem{
   width: 23rem;
   padding: 3.2rem 2.4rem 4.8rem;
@@ -39,7 +57,7 @@
 .commentItem{
   position: relative;
   width: 35.2rem;
-  margin: 0 1.6rem;
+  // margin: 0 1.6rem;
   padding: 4.8rem 3.2rem 2.4rem;
   overflow:visible;
   &__userImg{
@@ -73,4 +91,34 @@
       display: inline-block;
     }
   }
+}
+
+.navCard{
+  display: flex;
+  justify-content: center;
+  margin-top: 2.4rem;
+  ul{
+    display: flex;
+    padding: 0;
+    
+  }
+
+  li{
+    width: 1rem;
+    height: 1rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 .4rem;
+
+    a{
+      display: inline-block;
+    }
+  }
+
+  li.selected{
+    background-color: $color-hot;
+    width: 1.6rem;
+    border-radius: 5rem;
+  }
+
 }

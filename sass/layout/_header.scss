@@ -1,8 +1,24 @@
+.siteHeader{
+  @include respond(lg){
+    height: 76.8rem;
+    position:relative;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right;
+    background-size: contain;
+  }
+}
+
 .navBox{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem;
   border-bottom:2px solid $color-hot ;
+
+  @include respond(lg){
+    border-bottom:none ;
+    @include width-lg
+  }
+  
 }
 
 .logoBox{
@@ -11,16 +27,45 @@
   h1{
     display: none;
   }
+
+  @include respond(lg){
+    width: 22rem;
+  }
 }
 
 .banner{
   padding: 0 2rem;
-}
+  
 
+  @include respond(lg){
+    height: 53rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include width-lg
+  }
+
+ 
+
+
+}
+.titleBox{
+  z-index: 1;
+}
 .imgBox{
+  position:static;
   padding: 0 2rem;
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg) no-repeat bottom center;
   background-size: contain;
-  outline: 1px solid #eee;
+
+  @include respond(lg){
+    width: 53.2rem;
+    background: none;
+    position:absolute;
+    top:11rem;
+    right:14rem;
+    z-index: 0;
+  }
+ 
 }
 
