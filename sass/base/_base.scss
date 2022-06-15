@@ -16,9 +16,18 @@ body{
   margin: 0 auto;
 
 }
+.hideBox{
+  overflow-x: auto;
+  overflow-y: visible;
+
+  @include respond(lg){
+    // @include width-lg;
+  }
+}
 
 .itemBox{
   display: block;
+  padding: 0 2rem;
   
 
   @include respond(med){
@@ -29,7 +38,21 @@ body{
   }
 
   @include respond(lg){
+    padding: 0;
     @include width-lg
+  }
+
+  &--commit{
+    display: flex;
+    width:fit-content;
+    padding: 6rem 0 1rem;
+    flex-wrap: nowrap;
+
+    @include respond(lg){
+      
+    }
+    
+  
   }
 
   &--production{
@@ -40,9 +63,29 @@ body{
       
     }
   }
+
+  &--question{
+    padding: 2rem;
+    @include respond(lg){
+      max-width: 91rem;
+     
+    }
+  }
+
+  &--plane{
+    @include respond(lg){
+      max-width: 91rem;
+      
+    }
+  }
 }
+
+.hot{
+  color: $color-primary;
+}
+
 img{
-  width:100%;
+  max-width:100%;
 }
 a{
   text-decoration: none;
@@ -50,6 +93,13 @@ a{
 
 ul{
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  margin: 0;
+  padding: 0;
 }
 
 

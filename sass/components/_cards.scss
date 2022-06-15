@@ -1,6 +1,12 @@
 .card{
-  border-radius: 1.2rem;
+  border-radius: $card-radius;
   background-color: #fff;
   box-shadow: 0 .5rem 1rem $color-shadow;
   overflow: hidden;
+  transition: all .8s;
+
+  &:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 .8rem .3rem $color-shadow;
+  }
 }

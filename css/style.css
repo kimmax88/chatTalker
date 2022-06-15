@@ -319,8 +319,13 @@ body {
   max-width: 100%;
   margin: 0 auto; }
 
+.hideBox {
+  overflow-x: auto;
+  overflow-y: visible; }
+
 .itemBox {
-  display: block; }
+  display: block;
+  padding: 0 2rem; }
   @media (min-width: 700px) {
     .itemBox {
       display: flex;
@@ -328,22 +333,45 @@ body {
       justify-content: space-between; } }
   @media (min-width: 900px) {
     .itemBox {
+      padding: 0;
       max-width: 108.5rem;
       margin: 0 auto; } }
+  .itemBox--commit {
+    display: flex;
+    width: fit-content;
+    padding: 6rem 0 1rem;
+    flex-wrap: nowrap; }
   @media (min-width: 900px) {
     .itemBox--production {
       width: 50rem;
       order: -1;
       margin: 0; } }
+  .itemBox--question {
+    padding: 2rem; }
+    @media (min-width: 900px) {
+      .itemBox--question {
+        max-width: 91rem; } }
+  @media (min-width: 900px) {
+    .itemBox--plane {
+      max-width: 91rem; } }
+
+.hot {
+  color: #56C4C5; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 a {
   text-decoration: none; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
 
 section {
   margin-top: 6rem; }
@@ -373,27 +401,27 @@ section {
     .sectionDesc {
       font-size: 2rem; } }
 
-.titleBox {
-  display: flex;
-  flex-direction: column; }
+.titleBox__titleMain {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 0; }
+
+.titleBox__titleHot {
+  color: #56C4C5;
+  order: -1;
+  margin: 3rem 0 .8rem; }
+
+.titleBox__subTitle {
+  margin: 1.6rem 0 3rem; }
+
+@media (min-width: 900px) {
   .titleBox__titleMain {
-    font-size: 3.2rem;
-    font-weight: bold;
-    margin: 0; }
+    font-size: 4.8rem; }
   .titleBox__titleHot {
-    color: #56C4C5;
-    order: -1;
-    margin: 3rem 0 .8rem; }
+    font-size: 1.8rem; }
   .titleBox__subTitle {
-    margin: 1.6rem 0 3rem; }
-  @media (min-width: 900px) {
-    .titleBox .titleBox__titleMain {
-      font-size: 4.8rem; }
-    .titleBox .titleBox__titleHot {
-      font-size: 1.8rem; }
-    .titleBox .titleBox__subTitle {
-      font-size: 2rem;
-      margin: 1.5rem 0 3rem; } }
+    font-size: 2rem;
+    margin: 1.5rem 0 3rem; } }
 
 .mediaItem {
   text-align: center; }
@@ -434,7 +462,8 @@ section {
 
 .btn {
   font-weight: 200;
-  width: 13rem;
+  font-size: 1.8rem;
+  width: 13.6rem;
   border-radius: 3rem;
   background-color: #56C4C5;
   color: #fff;
@@ -442,17 +471,45 @@ section {
   transition: all .8s;
   display: inline-block; }
   .btn:hover {
+    color: #333;
     background-color: #FFD153;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.8); }
-
-.btn--em {
-  background-color: #FF5D50; }
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    transform: translateX(1rem); }
+  .btn--em {
+    background-color: #FF5D50; }
+  .btn--border {
+    color: #56C4C5;
+    background-color: #fff;
+    border: 1px solid #56C4C5; }
+    .btn--border:hover {
+      border: 1px solid transparent; }
+  .btn--price {
+    width: 9rem;
+    height: 4rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .btn--price:hover {
+      transform: none; }
+    @media (min-width: 900px) {
+      .btn--price {
+        width: 13rem;
+        height: 5rem;
+        font-size: 1.8rem; } }
+  .btn--price-selected {
+    background-color: #56C4C5;
+    color: #fff; }
 
 .card {
   border-radius: 1.2rem;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem #00000014;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all .8s; }
+  .card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0.8rem 0.3rem #00000014; }
 
 @media (min-width: 900px) {
   .siteHeader {
@@ -461,15 +518,23 @@ section {
     background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right;
     background-size: contain; } }
 
+@media (min-width: 900px) {
+  .siteHeader--price {
+    background-color: #F7F9FD;
+    border-radius: 0 0 0 30%; } }
+
 .navBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  border-bottom: 2px solid #FFD153; }
+  border-bottom: 2px solid #FFD153;
+  position: relative;
+  z-index: 2; }
   @media (min-width: 900px) {
     .navBox {
       border-bottom: none;
+      padding: 2rem;
       max-width: 108.5rem;
       margin: 0 auto; } }
 
@@ -491,9 +556,34 @@ section {
       align-items: center;
       max-width: 108.5rem;
       margin: 0 auto; } }
+  .banner--price {
+    height: 49rem;
+    position: relative;
+    background-color: #F7F9FD;
+    border-radius: 0 0 0 50%; }
+    @media (min-width: 900px) {
+      .banner--price {
+        position: static;
+        height: 38rem;
+        background-color: transparent;
+        max-width: 108.5rem;
+        margin: 0 auto; } }
 
 .titleBox {
-  z-index: 1; }
+  z-index: 8;
+  display: flex;
+  flex-direction: column; }
+  .titleBox--price {
+    position: absolute;
+    top: 4.8rem;
+    left: 2rem;
+    z-index: 8; }
+    @media (min-width: 900px) {
+      .titleBox--price {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 12.6rem 2rem 0; } }
 
 .imgBox {
   position: static;
@@ -508,26 +598,42 @@ section {
       top: 11rem;
       right: 14rem;
       z-index: 0; } }
-
-footer {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top center;
-  height: 52rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 6rem; }
-  @media (min-width: 900px) {
-    footer {
-      margin-top: 10rem; } }
+  .imgBox--price {
+    text-align: right;
+    z-index: -2; }
+    .imgBox--price img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      z-index: 0; }
+      @media (min-width: 900px) {
+        .imgBox--price img {
+          width: auto; } }
 
 .talk {
-  margin-top: 29rem; }
+  padding-top: 29rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg) no-repeat top center;
+  background-size: contain;
+  height: 46rem;
+  text-align: center; }
   .talk__text {
-    margin: 0;
     margin-bottom: 2.4rem; }
+    @media (min-width: 900px) {
+      .talk__text {
+        font-size: 3.2rem; } }
+  @media (min-width: 700px) {
+    .talk {
+      background-size: cover;
+      margin-top: 10rem; } }
+  @media (min-width: 900px) {
+    .talk {
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top center;
+      background-size: cover;
+      margin-top: 10rem; } }
 
 .copyright {
+  text-align: center;
   background-color: #F5F5F5;
   padding: 1.6rem 0;
   margin: 0; }
@@ -580,6 +686,7 @@ footer {
 .commentItem {
   position: relative;
   width: 35.2rem;
+  margin: 0 1rem;
   padding: 4.8rem 3.2rem 2.4rem;
   overflow: visible; }
   .commentItem__userImg {
@@ -627,3 +734,142 @@ footer {
     background-color: #FFD153;
     width: 1.6rem;
     border-radius: 5rem; }
+
+.peopleBox {
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 900px) {
+    .peopleBox {
+      margin: 4rem 0 5rem; } }
+
+.people {
+  display: flex;
+  overflow-x: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-left: 2rem;
+  margin-bottom: 3.2rem; }
+  .people li {
+    margin-right: .6rem; }
+
+.planeItem {
+  width: 33.5rem;
+  margin: 0 auto;
+  margin-bottom: 2.4rem;
+  padding: 0 1.6rem 2.4rem; }
+  @media (min-width: 900px) {
+    .planeItem {
+      width: 44.5rem;
+      padding: 0 2.3rem 3.2rem;
+      margin: 0; } }
+  .planeItem__title {
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0;
+    padding: 1.6rem;
+    border-bottom: 1px solid #ddd; }
+  .planeItem__text {
+    text-align: center;
+    margin: 2.4rem 0; }
+    @media (min-width: 900px) {
+      .planeItem__text {
+        margin: 3.2rem 0; } }
+  .planeItem__list li {
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+    padding-left: 3.2rem;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg) no-repeat;
+    background-size: 1.6rem; }
+    @media (min-width: 900px) {
+      .planeItem__list li {
+        font-size: 1.6rem;
+        background-size: 2rem; } }
+  .planeItem__btn {
+    text-align: center;
+    margin-top: 3.6rem; }
+
+.calBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.4rem 0; }
+  @media (min-width: 900px) {
+    .calBox {
+      margin: 3.2rem 0; } }
+
+.calItem {
+  width: 14rem;
+  height: 9rem;
+  background-color: #F5F5F5;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 900px) {
+    .calItem {
+      width: 17rem;
+      height: 11rem; } }
+  .calItem__title {
+    font-size: 1.2rem;
+    margin: 0; }
+  .calItem__num {
+    font-size: 1.2rem; }
+    .calItem__num span {
+      font-size: 2.8rem; }
+      @media (min-width: 900px) {
+        .calItem__num span {
+          font-size: 3.2rem; } }
+  .calItem__equ {
+    font-size: 2.4rem;
+    margin: 0 .6rem; }
+    @media (min-width: 900px) {
+      .calItem__equ {
+        font-size: 2.9rem; } }
+
+.question {
+  width: 100%;
+  padding: 1.6rem;
+  margin-bottom: 1.6rem; }
+  .question dt {
+    color: #221E1F;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between; }
+  .question dd {
+    visibility: hidden;
+    max-height: 0;
+    margin: 0;
+    color: #747474;
+    line-height: 2;
+    transition: all .8s; }
+  .question__btn {
+    position: relative;
+    color: #56C4C5;
+    background-color: transparent;
+    border: none; }
+    .question__btn::after, .question__btn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #56C4C5;
+      width: 2rem;
+      height: .2rem;
+      display: inline-block;
+      transition: all .8s; }
+    .question__btn::before {
+      transform: translate(-50%, -50%) rotateZ(-90deg); }
+    .question__btn::after {
+      transform: translate(-50%, -50%); }
+
+.open dt {
+  color: #56C4C5;
+  margin-bottom: 1.6rem; }
+
+.open dd {
+  visibility: visible;
+  max-height: 20rem; }
+
+.open .question__btn::before {
+  transform: translate(-50%, -50%) rotateZ(0deg); }

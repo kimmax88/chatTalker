@@ -1,6 +1,7 @@
 .btn{
    font-weight: 200;
-   width: 13rem;
+   font-size: 1.8rem;
+   width: 13.6rem;
    border-radius: 3rem;
    background-color: $color-primary;
    color: #fff;
@@ -9,13 +10,50 @@
    display: inline-block;
 
    &:hover{
+      color: #333;
       background-color: $color-hot;
       box-shadow: .5rem .5rem 1rem rgba($color-shadow, .8);
+      transform: translateX(1rem);
+     
+   }
+
+   &--em{
+      background-color: $color-secondary;
+   }
+
+   &--border{
+      color:$color-primary;
+      background-color: #fff;
+      border: 1px solid $color-primary;
+      &:hover{
+         border: 1px solid transparent;
+      }
+   }
+
+   &--price{
+      width: 9rem;
+      height: 4rem;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover{
+         transform: none;
+      }
+      @include respond(lg){
+         width: 13rem;
+         height: 5rem;
+         font-size: 1.8rem;
+      }
+   
+   }
+
+   &--price-selected{
+      background-color: $color-primary;
+      color: #fff;
    }
 
 
 }
 
-.btn--em{
-   background-color: $color-secondary;
-}
