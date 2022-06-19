@@ -312,12 +312,13 @@ html {
 body {
   color: #221E1F;
   font-size: 1.6rem;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans TC',"Wendy One", sans-serif;
   line-height: 1.4; }
 
 .wrapper {
   max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .hideBox {
   overflow-x: auto;
@@ -372,6 +373,9 @@ ul {
 p {
   margin: 0;
   padding: 0; }
+
+button {
+  cursor: pointer; }
 
 section {
   margin-top: 6rem; }
@@ -469,7 +473,8 @@ section {
   color: #fff;
   padding: 1rem 3rem;
   transition: all .8s;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   .btn:hover {
     color: #333;
     background-color: #FFD153;
@@ -549,6 +554,30 @@ section {
     .ball04 {
       top: 0rem;
       background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -26.5rem bottom 10rem/360px; } }
+
+.toTop {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 60rem;
+  right: 1.6rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #56C4C5;
+  z-index: 8;
+  font-size: 1.4rem;
+  font-weight: normal;
+  transition: all .8s; }
+  @media (min-width: 900px) {
+    .toTop {
+      width: 7rem;
+      height: 7rem;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      top: 66rem;
+      right: 6rem; } }
 
 .siteHeader {
   position: relative; }

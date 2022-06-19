@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
+    <button class="toTop">TOP</button>
     <header class="siteHeader--price">
       <div class="navBox">
         <div class="logoBox">
@@ -38,11 +39,11 @@
         <h2 class="sectionTitle">彈性選擇，提供您選擇最適合的方案</h2>
         <div class="peopleBox">
           <ul class="people">
-            <li><a class="btn btn--border btn--price btn--price-selected"href="#">10000位</a></li>
-            <li><a class="btn btn--border btn--price" href="#">15000位</a></li>
-            <li><a class="btn btn--border btn--price" href="#">20000位</a></li>
-            <li><a class="btn btn--border btn--price" href="#">25000位</a></li>
-            <li><a class="btn btn--border btn--price" href="#">&gt;25000位</a></li>
+            <li><a data-index="1" class="btn btn--border btn--price btn--price-selected">10000位</a></li>
+            <li><a data-index="2" class="btn btn--border btn--price" >15000位</a></li>
+            <li><a data-index="3" class="btn btn--border btn--price" >20000位</a></li>
+            <li><a data-index="4" class="btn btn--border btn--price" >25000位</a></li>
+            <li><a data-index="5" class="btn btn--border btn--price" >&gt;25000位</a></li>
           </ul>
         </div>
         <div class="itemBox itemBox--plane">
@@ -57,7 +58,7 @@
               <p class="calItem__equ">=</p>
               <div class="calItem">
                 <p class="calItem__title">試算每月的費用</p>
-                <p class="calItem__num"><span >600</span>TWD</p>
+                <p class="calItem__num money"><span >600</span>TWD</p>
               </div>
             </div>
             <ul class="planeItem__list">
@@ -81,7 +82,7 @@
               <p class="calItem__equ">=</p>
               <div class="calItem">
                 <p class="calItem__title">試算每月的費用</p>
-                <p class="calItem__num"><span >1600</span>TWD</p>
+                <p class="calItem__num money"><span >1600</span>TWD</p>
               </div>
             </div>
             <ul class="planeItem__list">
@@ -101,16 +102,16 @@
       <section>
         <h2 class="sectionTitle">常見問題</h2>
         <dl class="itemBox itemBox--question">
-          <div class="card question">
-            <dt class="">我要怎麼變更方案？ <button class="question__btn" data-index="1"></button></dt>
+          <div class="card question" data-index="1">
+            <dt class="">我要怎麼變更方案？ <button class="question__btn" ></button></dt>
             <dd>當然哦！我們錢都收了，不會拋棄你的！ 請您直接來我們公司，我們假日也都在辦公室。</dd>
           </div>
-          <div class="card question">
-            <dt>如果我沒有LINE官方帳號怎麼辦？ <button class="question__btn" data-index="2"></button></dt>
+          <div class="card question" data-index="2">
+            <dt>如果我沒有LINE官方帳號怎麼辦？ <button class="question__btn" ></button></dt>
             <dd>當然哦！我們錢都收了，不會拋棄你的！ 請您直接來我們公司，我們假日也都在辦公室。</dd>
           </div>
-          <div class="card question open">
-            <dt>非上班日有客服支援嗎？ <button class="question__btn" data-index="3"></button></dt>
+          <div class="card question open" data-index="3">
+            <dt>非上班日有客服支援嗎？ <button class="question__btn" ></button></dt>
             <dd>當然哦！我們錢都收了，不會拋棄你的！ 請您直接來我們公司，我們假日也都在辦公室。</dd>
           </div>
         </dl>
@@ -121,6 +122,7 @@
       <p class="copyright">© 2022 chatTalker. All Rights Reserved.</p>
     </footer>
   </div>
+  <script src="/js/top.js"></script>
   <script src="/js/price.js"></script>
 </body>
 </html>

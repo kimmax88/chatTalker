@@ -8,12 +8,13 @@ html{
 body{
   color:$color-text-main;
   font-size: 1.6rem;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans TC',"Wendy One", sans-serif;
   line-height: 1.4;  
 }
 .wrapper{
   max-width: 100%;
   margin: 0 auto;
+  position: relative;
 
 }
 .hideBox{
@@ -100,6 +101,10 @@ ul{
 p{
   margin: 0;
   padding: 0;
+}
+
+button{
+  cursor: pointer;
 }
 
 
