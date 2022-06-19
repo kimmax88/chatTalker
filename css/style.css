@@ -511,17 +511,56 @@ section {
     transform: translateY(-1rem);
     box-shadow: 0 0.8rem 0.3rem #00000014; }
 
-@media (min-width: 900px) {
-  .siteHeader {
-    height: 76.8rem;
-    position: relative;
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right;
-    background-size: contain; } }
+[class^="ball"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2; }
 
-@media (min-width: 900px) {
-  .siteHeader--price {
-    background-color: #F7F9FD;
-    border-radius: 0 0 0 30%; } }
+.ball01 {
+  top: 18.6rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -8rem bottom/126px; }
+  @media (min-width: 900px) {
+    .ball01 {
+      top: 18rem;
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -22.2rem bottom/360px; } }
+
+.ball02 {
+  top: 0;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat right -5rem bottom/135px; }
+  @media (min-width: 900px) {
+    .ball02 {
+      top: 17rem;
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat right -10rem bottom/310px; } }
+
+.ball03 {
+  top: 4rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -7.6rem top/150px; }
+  @media (min-width: 900px) {
+    .ball03 {
+      top: 4.6rem;
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left 5rem top/150px; } }
+
+.ball04 {
+  padding-top: 60rem;
+  top: 0rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -10rem top 63.6rem/200px; }
+  @media (min-width: 700px) {
+    .ball04 {
+      top: 0rem;
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -26.5rem bottom 10rem/360px; } }
+
+.siteHeader {
+  position: relative; }
+  @media (min-width: 900px) {
+    .siteHeader {
+      height: 76.8rem;
+      position: relative;
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right/contain; } }
+  @media (min-width: 900px) {
+    .siteHeader--price {
+      background-color: #F7F9FD;
+      border-radius: 0 0 0 30%; } }
 
 .navBox {
   display: flex;
@@ -643,6 +682,9 @@ section {
   .mediaItem__img {
     max-width: 6rem; }
 
+.ta {
+  position: relative; }
+
 .taItem {
   width: 26rem;
   margin: 0 auto 2.4rem; }
@@ -682,6 +724,9 @@ section {
     align-items: center; }
   .productionItem__img {
     width: 60%; }
+
+.commit {
+  position: relative; }
 
 .commentItem {
   position: relative;
@@ -751,6 +796,9 @@ section {
   margin-bottom: 3.2rem; }
   .people li {
     margin-right: .6rem; }
+
+.plane {
+  position: relative; }
 
 .planeItem {
   width: 33.5rem;

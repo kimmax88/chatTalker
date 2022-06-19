@@ -1,0 +1,48 @@
+[class^="ball"]{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  z-index: -2;
+
+}
+
+.ball01{
+  top:18.6rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -8rem bottom/126px;
+  @include respond(lg){
+    top:18rem;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -22.2rem bottom/360px;
+
+  }
+}
+
+.ball02{
+  top:0;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat right -5rem bottom/135px;
+  @include respond(lg){
+    top:17rem;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat right -10rem bottom/310px;
+
+  }
+}
+
+.ball03{
+  top:4rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -7.6rem top/150px;
+  @include respond(lg){
+    top:4.6rem;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left 5rem top/150px;
+
+  }
+}
+
+.ball04{
+  padding-top:60rem ;
+  top:0rem;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -10rem top 63.6rem/200px;
+  @include respond(med){
+    top:0rem;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat left -26.5rem bottom 10rem/360px;
+
+  }
+}

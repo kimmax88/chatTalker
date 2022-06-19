@@ -1,9 +1,10 @@
 .siteHeader{
+  position: relative;
   @include respond(lg){
     height: 76.8rem;
     position:relative;
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right;
-    background-size: contain;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top right/contain;
+
   }
   &--price{
     @include respond(lg){
@@ -45,6 +46,7 @@
 
 .banner{
   padding: 0 2rem;
+ 
   
   @include respond(lg){
     height: 53rem;
