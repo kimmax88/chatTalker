@@ -1,0 +1,27 @@
+.toTop{
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 60rem;
+  right:1.6rem;
+  padding: 1rem;
+  border:none;
+  border-radius: 50%;
+  color: #fff;
+  background-color:$color-primary;
+  z-index: 8;
+  font-size: 1.4rem;
+  // font-family: "Wendy One";
+  font-weight: normal;
+  transition: all .8s;
+
+  @include respond(lg){
+    width: 7rem;
+    height: 7rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    top: 66rem;
+    right:6rem;
+  }
+
+}
