@@ -18,7 +18,7 @@ body{
 
 }
 .hideBox{
-  overflow-x: auto;
+  overflow-x:hidden;
   overflow-y: visible;
 
   @include respond(lg){
@@ -114,3 +114,4 @@ section{
     margin-top: 10rem;
   }
 }
+

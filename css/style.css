@@ -321,7 +321,7 @@ body {
   position: relative; }
 
 .hideBox {
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: visible; }
 
 .itemBox {
@@ -395,7 +395,7 @@ section {
       text-align: left; } }
   @media (min-width: 900px) {
     .sectionTitle--commit {
-      margin-bottom: 10rem; } }
+      margin-bottom: 5rem; } }
 
 .sectionDesc {
   font-size: 1.8rem;
@@ -579,6 +579,25 @@ section {
       top: 66rem;
       right: 6rem; } }
 
+.swiper {
+  max-width: 35rem;
+  padding: 1rem 1rem 3rem; }
+  @media (min-width: 700px) {
+    .swiper {
+      max-width: 70rem; } }
+  @media (min-width: 900px) {
+    .swiper {
+      max-width: 100rem; } }
+  .swiper-pagination-bullet2 {
+    width: 1rem;
+    height: 1rem;
+    background-color: #ddd;
+    border-radius: 50%; }
+  .swiper-pagination-bullet-active {
+    background-color: #FFD153;
+    width: 1.6rem;
+    border-radius: 5rem; }
+
 .siteHeader {
   position: relative; }
   @media (min-width: 900px) {
@@ -760,7 +779,6 @@ section {
 .commentItem {
   position: relative;
   width: 35.2rem;
-  margin: 0 1rem;
   padding: 4.8rem 3.2rem 2.4rem;
   overflow: visible; }
   .commentItem__userImg {
@@ -788,26 +806,6 @@ section {
       margin-left: .8rem;
       margin-bottom: .4rem;
       display: inline-block; }
-
-.navCard {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.4rem; }
-  .navCard ul {
-    display: flex;
-    padding: 0; }
-  .navCard li {
-    width: 1rem;
-    height: 1rem;
-    background-color: #ddd;
-    border-radius: 50%;
-    margin: 0 .4rem; }
-    .navCard li a {
-      display: inline-block; }
-  .navCard li.selected {
-    background-color: #FFD153;
-    width: 1.6rem;
-    border-radius: 5rem; }
 
 .peopleBox {
   display: flex;

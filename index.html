@@ -5,7 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chatTalker</title>
-
+  
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -144,9 +148,9 @@
       </section>
       <section class="commit">
         <h2 class="sectionTitle sectionTitle--commit">好評如潮</h2>
-        <div class="hideBox">
-          <div class=" itemBox--commit">
-            <div class="card commentItem">
+        <div class=" swiper">
+          <div class=" itemBox--commit swiper-wrapper">
+            <div class="card commentItem swiper-slide">
               <img class="commentItem__userImg" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user01.jpg" alt="Lina 執行長">
               <p class="commentItem__words">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</p>
               <hr>  
@@ -165,7 +169,7 @@
                 </p>
               </div>
             </div>
-            <div class="card commentItem">
+            <div class="card commentItem swiper-slide">
               <img class="commentItem__userImg" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user02.jpg" alt="Lina 執行長">
               <p class="commentItem__words">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！</p>
               <hr>
@@ -184,7 +188,7 @@
                 </p>
               </div>
             </div>
-            <div class="card commentItem">
+            <div class="card commentItem swiper-slide">
               <img class="commentItem__userImg" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user03.jpg" alt="Lina 執行長">
               <p class="commentItem__words">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～</p>
               <hr>
@@ -203,25 +207,7 @@
                 </p>
               </div>
             </div>
-            <div class="card commentItem">
-              <img class="commentItem__userImg" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user01.jpg" alt="Lina 執行長">
-              <p class="commentItem__words">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</p>
-              <hr>  
-              <div class="commentUser">
-                <div class="commentUser__info">
-                  <p class="commentUser__com">清心寡慾設計公司</p>
-                  <p class="commentUser__title">Lina 執行長</p>
-                </div>
-                <p class="commentUser__star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                  <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="icon_star">
-                </p>
-              </div>
-            </div> <div class="card commentItem">
+            <div class="card commentItem swiper-slide">
               <img class="commentItem__userImg" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user01.jpg" alt="Lina 執行長">
               <p class="commentItem__words">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</p>
               <hr>  
@@ -242,15 +228,15 @@
             </div>
           </div>
         </div>
-        <div class="navCard">
-          <ul>
+       
+          <ul class="swiper-pagination">
             <li class="selected"><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
            
           </ul>
-        </div>
+        
         <div class="ball03"></div>
       </section>
     </main>
@@ -263,5 +249,7 @@
     </footer>
   </div>
   <script src="js/top.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
+  <script src="js/swiper.js"></script>
 </body>
 </html>
